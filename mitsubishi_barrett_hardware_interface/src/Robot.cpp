@@ -95,14 +95,14 @@ int main(int argc, char** argv)
     while (ros::ok())
     {
         ros::Duration period;
-        robot.mitsubishi_arm_interface.readHW();
+        //robot.mitsubishi_arm_interface.readHW();
         robot.barrett_arm_interface.readHW();
 
         ros::Time now=ros::Time::now();
         period=now-previous;
         //std::cout << "period:"<<period<<std::endl;
         cm.update(now, period);
-        robot.mitsubishi_arm_interface.writeHW();
+        //robot.mitsubishi_arm_interface.writeHW();
         robot.barrett_arm_interface.writeHW();
 
         ros::spinOnce();

@@ -628,7 +628,9 @@ MitsubishiBarrettHardwareInterface::MitsubishiBarrettHardwareInterface(const int
     pos_cmd_previous.resize(joint_number);
     vel_cmd_previous.resize(joint_number);
     eff_cmd_previous.resize(joint_number);*/
-
+    std::string port = "/dev/ttyUSB1";
+    MitsubishiArmInterface mitsubishi_arm_interface(port);
+    
     mitsubishi_arm_interface.init(jnt_state_interface,
                                   jnt_pos_interface);
 

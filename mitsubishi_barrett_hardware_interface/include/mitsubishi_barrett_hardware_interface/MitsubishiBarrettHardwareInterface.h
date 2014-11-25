@@ -78,7 +78,7 @@
 class MitsubishiBarrettHardwareInterface : public hardware_interface::RobotHW
 {
 public:
-    MitsubishiArmInterface mitsubishi_arm_interface;
+
     BarrettHandHardwareInterface barrett_arm_interface;
 
     MitsubishiBarrettHardwareInterface(const int & canbus_number_,

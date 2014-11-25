@@ -5,6 +5,7 @@ project(mitsubishi_barrett_hardware_interface)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
+  cmake_modules
   barrett_hand_hardware_interface
   mitsubishi_arm_hardware_interface
   roscpp
