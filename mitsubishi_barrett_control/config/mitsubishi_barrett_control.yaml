@@ -90,15 +90,15 @@ mitsubishi_barrett:
     constraints:
       goal_time: 100.0                   # Override default
       j1:
-        trajectory: 0.01
+        trajectory: -1.0#0.01
       j2:
-        trajectory: 0.01
+        trajectory: -1.0#0.01
       j3:
-        trajectory: 0.01
+        trajectory: -1.0#0.01
       j4:
-        trajectory: 0.01
+        trajectory: -1.0#0.01
       j5:
-        trajectory: 0.01
+        trajectory: -1.0#0.01
       j6:
         trajectory: -1.0
 
@@ -111,26 +111,29 @@ mitsubishi_barrett:
       - finger_3_med_joint
       - finger_1_prox_joint
       - finger_2_prox_joint
-    gains: # Required because we're controlling a velocity interface
-      finger_1_med_joint: {p: 1000,  d: 10, i: 10, i_clamp: 1}
-      finger_2_med_joint: {p: 1000,  d: 10, i: 10, i_clamp: 1}
-      finger_3_med_joint: {p: 1000,  d: 10, i: 10, i_clamp: 1}
-      finger_1_prox_joint: {p: 1000,  d: 10, i: 10, i_clamp: 1}
-      finger_2_prox_joint: {p: 1000,  d: 10, i: 10, i_clamp: 1}
+#     gains: # Required because we're controlling a velocity interface
+#       finger_1_med_joint: {p: 1000,  d: 10, i: 10, i_clamp: 1}
+#       finger_2_med_joint: {p: 1000,  d: 10, i: 10, i_clamp: 1}
+#       finger_3_med_joint: {p: 1000,  d: 10, i: 10, i_clamp: 1}
+#       finger_1_dist_joint: {p: 1000,  d: 10, i: 10, i_clamp: 1}
+#       finger_2_dist_joint: {p: 1000,  d: 10, i: 10, i_clamp: 1}
+#       finger_3_dist_joint: {p: 1000,  d: 10, i: 10, i_clamp: 1}
+#       finger_1_prox_joint: {p: 1000,  d: 10, i: 10, i_clamp: 1}
+#       finger_2_prox_joint: {p: 1000,  d: 10, i: 10, i_clamp: 1}
     state_publish_rate: 20.0
     action_monitor_rate: 20.0
     constraints:
       goal_time: 100.0                   # Override default
       finger_1_med_joint:
-        trajectory: 0.01
+        trajectory: -1.0#0.01
       finger_2_med_joint:
-        trajectory: 0.01
+        trajectory: -1.0#0.01
       finger_3_med_joint:
-        trajectory: 0.01
+        trajectory: -1.0#0.01
       finger_1_prox_joint:
-        trajectory: 0.01
+        trajectory: -1.0#0.01
       finger_2_prox_joint:
-        trajectory: -1.0
+        trajectory: -1.0#
 
 
  
