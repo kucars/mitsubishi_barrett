@@ -1,5 +1,5 @@
 controller_list:
-  - name: fake_arm_controller
+  - name: fake_chain1_controller
     joints:
       - j1
       - j2
@@ -7,14 +7,28 @@ controller_list:
       - j4
       - j5
       - j6
-  - name: fake_hand_controller
-    joints:
       - finger_1_prox_joint
       - finger_1_med_joint
+  - name: fake_chain2_controller
+    joints:
+      - j1
+      - j2
+      - j3
+      - j4
+      - j5
+      - j6
       - finger_2_prox_joint
       - finger_2_med_joint
+  - name: fake_chain3_controller
+    joints:
+      - j1
+      - j2
+      - j3
+      - j4
+      - j5
+      - j6
       - finger_3_med_joint
-  - name: fake_both_controller
+  - name: fake_arm_controller
     joints:
       - j1
       - j2

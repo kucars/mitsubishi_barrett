@@ -9,48 +9,26 @@
     <!--JOINTS: When a joint is specified, the child link of that joint (which will always exist) is automatically included-->
     <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
     <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
+    <group name="chain1">
+        <chain base_link="base_link" tip_link="finger_1_dist_link" />
+    </group>
+    <group name="chain2">
+        <chain base_link="base_link" tip_link="finger_2_dist_link" />
+    </group>
+    <group name="chain3">
+        <chain base_link="base_link" tip_link="finger_3_dist_link" />
+    </group>
     <group name="arm">
-        <joint name="j1" />
-        <joint name="j2" />
-        <joint name="j3" />
-        <joint name="j4" />
-        <joint name="j5" />
-        <joint name="j6" />
-        <joint name="torque_sensor_joint" />
-        <joint name="palm_joint" />
-        <joint name="fixed_joint_1" />
-        <joint name="fixed_joint_2" />
-	<group name="hand" />
+        <group name="chain1" />
+        <group name="chain2" />
+        <group name="chain3" />
     </group>
-    <group name="hand">
-        <joint name="mitsubishi_barrett_joint" />
-        <joint name="finger_1_prox_joint" />
-        <joint name="finger_1_med_joint" />
-        <joint name="finger_1_dist_joint" />
-        <joint name="finger_2_prox_joint" />
-        <joint name="finger_2_med_joint" />
-        <joint name="finger_2_dist_joint" />
-        <joint name="finger_3_med_joint" />
-        <joint name="finger_3_dist_joint" />
-	<link name="end_effector" />
-        <link name="barrett_base_link" />
-        <link name="finger_1_prox_link" />
-        <link name="finger_1_med_link" />
-        <link name="finger_1_dist_link" />
-        <link name="finger_2_prox_link" />
-        <link name="finger_2_med_link" />
-        <link name="finger_2_dist_link" />
-        <link name="finger_3_med_link" />
-        <link name="finger_3_dist_link" />
-        <link name="palm_frame" />
-    </group>
-<!--    <group name="both">
-        <group name="arm" />
-        <group name="hand" />
-    </group>-->
-    <end_effector name="hand_eef" parent_link="palm_frame" group="hand" parent_group="arm" />
+    <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
+<!--    <end_effector name="eef1" parent_link="finger_1_med_link" group="chain1" />
+    <end_effector name="eef2" parent_link="finger_2_med_link" group="chain2" />
+    <end_effector name="eef3" parent_link="finger_3_med_link" group="chain3" />-->
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
-    <virtual_joint name="virtual_joint" type="fixed" parent_frame="world" child_link="base_link" />
+    <virtual_joint name="virtual_joint" type="fixed" parent_frame="base_link" child_link="world" />
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
     <disable_collisions link1="barrett_base_link" link2="camera_link" reason="Never" />
     <disable_collisions link1="barrett_base_link" link2="elbow" reason="Never" />
@@ -70,12 +48,12 @@
     <disable_collisions link1="base_link" link2="shoulder_block" reason="Adjacent" />
     <disable_collisions link1="camera_link" link2="elbow" reason="Never" />
     <disable_collisions link1="camera_link" link2="elbow_block" reason="Never" />
+    <disable_collisions link1="camera_link" link2="finger_1_dist_link" reason="Never" />
     <disable_collisions link1="camera_link" link2="finger_1_med_link" reason="Never" />
     <disable_collisions link1="camera_link" link2="finger_1_prox_link" reason="Never" />
     <disable_collisions link1="camera_link" link2="finger_2_dist_link" reason="Never" />
     <disable_collisions link1="camera_link" link2="finger_2_med_link" reason="Never" />
     <disable_collisions link1="camera_link" link2="finger_2_prox_link" reason="Never" />
-    <disable_collisions link1="camera_link" link2="finger_3_med_link" reason="Never" />
     <disable_collisions link1="camera_link" link2="fore_arm" reason="Never" />
     <disable_collisions link1="camera_link" link2="shoulder" reason="Never" />
     <disable_collisions link1="camera_link" link2="shoulder_block" reason="Never" />

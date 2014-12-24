@@ -10,14 +10,91 @@ controller_list:
       - j4
       - j5
       - j6
- - name: /mitsubishi_barrett/barrett_trajectory_controller
+#  - name: /mitsubishi_barrett/barrett_trajectory_controller
+#    action_ns: follow_joint_trajectory
+#    type: FollowJointTrajectory
+#    default: true
+#    joints:
+#       - finger_1_med_joint
+#       - finger_2_med_joint
+#       - finger_3_med_joint
+#       - finger_1_prox_joint
+#       - finger_2_prox_joint
+
+ - name: /mitsubishi_barrett/finger_1_trajectory_controller
    action_ns: follow_joint_trajectory
    type: FollowJointTrajectory
    default: true
    joints:
       - finger_1_med_joint
-      - finger_2_med_joint
-      - finger_3_med_joint
       - finger_1_prox_joint
+ - name: /mitsubishi_barrett/finger_2_trajectory_controller
+   action_ns: follow_joint_trajectory
+   type: FollowJointTrajectory
+   default: true
+   joints:
+      - finger_2_med_joint
       - finger_2_prox_joint
-
+ - name: /mitsubishi_barrett/finger_3_trajectory_controller
+   action_ns: follow_joint_trajectory
+   type: FollowJointTrajectory
+   default: true
+   joints:
+      - finger_3_med_joint
+#  - name: /mitsubishi_barrett/chain1_trajectory_controller
+#    action_ns: follow_joint_trajectory
+#    type: FollowJointTrajectory
+#    default: true
+#    joints:
+#       - j1
+#       - j2
+#       - j3
+#       - j4
+#       - j5
+#       - j6
+#       - finger_1_prox_joint
+#       - finger_1_med_joint     
+# 
+#  - name: /mitsubishi_barrett/chain2_trajectory_controller
+#    action_ns: follow_joint_trajectory
+#    type: FollowJointTrajectory
+#    default: true
+#    joints:
+#       - j1
+#       - j2
+#       - j3
+#       - j4
+#       - j5
+#       - j6
+#       - finger_2_prox_joint
+#       - finger_2_med_joint
+#       
+#  - name: /mitsubishi_barrett/chain3_trajectory_controller
+#    action_ns: follow_joint_trajectory
+#    type: FollowJointTrajectory
+#    default: true
+#    joints:
+#       - j1
+#       - j2
+#       - j3
+#       - j4
+#       - j5
+#       - j6
+#       - finger_3_med_joint
+      
+#  - name: /mitsubishi_barrett/mitsubishi_barrett_trajectory_controller
+#    action_ns: follow_joint_trajectory
+#    type: FollowJointTrajectory
+#    default: true
+#    joints:
+#       - j1
+#       - j2
+#       - j3
+#       - j4
+#       - j5
+#       - j6
+#       - finger_1_prox_joint
+#       - finger_1_med_joint
+#       - finger_2_prox_joint
+#       - finger_2_med_joint
+#       - finger_3_med_joint

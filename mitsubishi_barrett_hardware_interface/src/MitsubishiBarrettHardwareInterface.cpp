@@ -451,6 +451,16 @@ void MitsubishiBarrettHardwareInterface::readMitsubishiHW()
    vel[4]=0.0;
    vel[5]=0.0;
 
+// //  **************************read HW Barrett***********************
+//     wamdriver->bus->hand_get_positions(pos[0+mitsubishi_joint_number],
+//                                       pos[1+mitsubishi_joint_number],
+//                                       pos[2+mitsubishi_joint_number],
+//                                       pos[3+mitsubishi_joint_number]);
+//    pos[4+mitsubishi_joint_number]=pos[3+mitsubishi_joint_number];
+// 
+//    pos[5+mitsubishi_joint_number]=(pos[0+mitsubishi_joint_number])/2.4+0.6;
+//    pos[6+mitsubishi_joint_number]=(pos[1+mitsubishi_joint_number])/2.4+0.6;
+//    pos[7+mitsubishi_joint_number]=(pos[2+mitsubishi_joint_number])/2.4+0.6;
 //    ft_get_status = bus->ft_get_data(ft_values,ft_filtered_values);
 
 

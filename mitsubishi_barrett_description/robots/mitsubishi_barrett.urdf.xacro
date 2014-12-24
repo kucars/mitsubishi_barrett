@@ -56,7 +56,7 @@
 
   <!-- Base of Kinect/Prosilica Mount -->
   <xacro:kinect_camera_v0 name="camera" parent="base_link" >
-     <origin xyz="0.796357 0.919602 0.431341" rpy="0.0247013 0.415733 -1.55723"/>
+     <origin xyz="0.691031 0.995553 0.428516" rpy="0.00123993 0.231118 -1.56538"/>
   </xacro:kinect_camera_v0 >
 
 </robot>
